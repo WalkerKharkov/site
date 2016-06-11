@@ -1,0 +1,18 @@
+.copyright{
+	color: white;
+}
+
+/*body{
+	opacity: 0.8;
+}*/
+
+.btn.focus, .btn:focus, .btn:hover, .btn.active, .btn:active, .btn.active.focus, .btn.active:focus, .btn:active.focus, .btn:active:focus{
+	background: #B34EE9;
+	color: white;
+	border: 0px solid;
+	outline: none;
+}
+
+.content{
+	visibility: hidden;
+}
