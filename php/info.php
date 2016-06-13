@@ -11,22 +11,34 @@
 	<header>
 		<div class="container controls">
 			<div class="row">
-				<div class="col-xs-4">
-					<button class="btn btn_portfolio">portfolio</button>
+				<div class="col-sm-4 center">
+					<button class="btn" data-action="info">info / contacts</button>
+					</div>
+				<div class="col-sm-4 center">
+					<button class="btn" data-action="portfolio">portfolio</button>
 				</div>	
-				<div class="col-xs-4">	
-					<button class="btn btn_contacts">send a mail</button>
-				</div>	
-				<div class="col-xs-4">	
-					<button class="btn btn_info">info</button>
+				<div class="col-sm-4 center">
+					<button class="btn" data-action="mail">send a mail</button>
 				</div>
 			</div>
 		</div>	
 	</header>
 	<main>
 		<div class="container content">
-			<div class="portfolio"></div>
-			<div class="send a mail">
+			<div class="info">
+                <div class="row">
+				    <div class="col-sm-4">
+                        <img src="../img/me.jpg" alt="my photo" id="myphoto">
+                    </div>
+                    <div class="col-sm-8">
+                        <!--    social icons   -->
+                    </div>
+                </div>
+			</div>
+			<div class="portfolio">
+
+			</div>
+			<div class="mail">
 				<?php
 				if ($_SERVER['REQUEST_METHOD']=='POST'){
 				if ($_POST['name']=='' or $_POST['mailto']=='' or
@@ -59,10 +71,9 @@
 						<p><textarea name="text" cols="50" rows="15" width="100%" class="radius" required></textarea></p>
 					</div>
 				</fieldset>
-				<p><input type="image" src="img/send.png" name="okbutton"></p>
+				<!--<p><input type="image" src="img/send.png" name="okbutton"></p>-->
 			</form>
 			</div>
-			<div class="info"></div>
 		</div>
 	</main>
 	<footer>

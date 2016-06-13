@@ -1,6 +1,3 @@
-/**
- * Created by Filatov Alex on 31.05.2016.
- */
 var doc=document,
     keepEl=doc.querySelector("#keep"),
     withEl=doc.querySelector("#with"),
@@ -10,9 +7,9 @@ var doc=document,
     viewMore=doc.querySelector("#viewmore"),
     tOut;
 
-function backgroundRender(){
+/*function backgroundRender(){
     $.backstretch("img/m_bckgrd.jpg");
-}
+}*/
 
 function textResize(){
     var value,
@@ -33,13 +30,21 @@ function textResize(){
     showMore();
 }
 
-function pageInit(){
+/*function pageInit(){
     backgroundRender();
     showPage();
     textResize();
     //curiosityBlock();
     showMore();
-}
+}*/
+
+(function pageInit(){
+    $.backstretch("img/m_bckgrd.jpg");
+    doc.body.style.visibility="visible";
+    //textResize();
+    //curiosityBlock();
+    //showMore();
+})();
 
 function showMore(){
     var width=window.innerWidth,
@@ -66,7 +71,7 @@ function showMore(){
 
 function curiosityBlock(){
 
-    window.addEventListener("contextmenu", function(event) {
+    /*window.addEventListener("contextmenu", function(event) {
         event.preventDefault();
         return false;
     });
@@ -90,14 +95,24 @@ function curiosityBlock(){
             event.preventDefault();
             return false;
         }
-    });
+    });*/
+    $(window).bind("contextmenu", function(event){
+                event.preventDefault();
+                return false;
+           }).bind("keypress keyup keydown",function(event) {
+                if (event.keyCode == 123) {
+                    event.preventDefault();
+                    return false;
+                }
+           });
+
 }
 
-function showPage(){
+/*function showPage(){
     doc.body.style.visibility="visible";
-}
+}*/
 
 
-window.addEventListener("resize", textResize);
-
-window.addEventListener("load", pageInit);
+$(window).bind("load resize", textResize);
+/*window.addEventListener("resize", textResize);
+window.addEventListener("load", pageInit);*/

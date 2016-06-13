@@ -1,18 +1,85 @@
 .copyright{
 	color: white;
+	text-align: center;
 }
 
-/*body{
-	opacity: 0.8;
-}*/
-
-.btn.focus, .btn:focus, .btn:hover, .btn.active, .btn:active, .btn.active.focus, .btn.active:focus, .btn:active.focus, .btn:active:focus{
+.btn.focus, .btn:focus, .btn:hover, .btn.active, .btn:active, .btn.active.focus, .btn.active:focus, .btn:active.focus, .btn:active:focus {
 	background: #B34EE9;
 	color: white;
-	border: 0px solid;
 	outline: none;
 }
 
+.btn{
+	font-size: inherit;
+	background: #A2A2A2;
+	color: white;
+	border: white solid 2px ;
+	border-radius: 7px;
+	-webkit-transition: background 0.5s linear 0.2s;
+	-moz-transition: background 0.5s linear 0.2s;
+	-o-transition: background 0.5s linear 0.2s;
+	transition: background 0.5s linear 0.2s;
+}
+
+.center{
+	text-align: center;
+}
+
 .content{
-	visibility: hidden;
+	/*display: none;*/
+}
+
+header, main, footer{
+	opacity: 0.8;
+}
+
+@supports
+(
+        (-webkit-transform: rotate(90deg)) or
+        (-moz-transform: rotate(90deg)) or
+        (-ms-transform: rotate(90deg)) or
+        (-o-transform: rotate(90deg)) or
+        (transform: rotate(90deg))
+    ) {
+	.copyright{
+		color: white;
+		text-shadow: 0 0 10px darkgray;
+	}
+}
+
+html, body{
+	height: 100%;
+}
+
+body{
+	display: flex;
+	flex-direction: column;
+}
+
+header, main{
+	flex: 1 0 auto;
+}
+
+footer{
+	flex: 0 0 auto;
+}
+
+.info, .portfolio, .mail{
+	display: none;
+	-webkit-transition: background 2s linear 1s;
+	-moz-transition: background 0.5s linear 1s;
+	-o-transition: background 0.5s linear 0.2s;
+	transition: background 2s linear 1s;
+}
+
+.info{
+	background-color: white;
+	border: 2px gray solid;
+	border-radius: 10px;
+}
+
+#myphoto{
+	border-radius: 10px;
+	border: 2px solid white;
+	/*opacity: 1;*/
 }
