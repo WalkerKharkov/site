@@ -15,19 +15,23 @@
 	color: white;
 	border: white solid 2px ;
 	border-radius: 7px;
-	-webkit-transition: background 0.5s linear 0.2s;
-	-moz-transition: background 0.5s linear 0.2s;
-	-o-transition: background 0.5s linear 0.2s;
-	transition: background 0.5s linear 0.2s;
+	-webkit-transition: background 0.4s linear 0.2s;
+	-moz-transition: background 0.4s linear 0.2s;
+	-o-transition: background 0.4s linear 0.2s;
+	transition: background 0.4s linear 0.2s;
 }
 
 .center{
 	text-align: center;
+	/*line-height: 200px;*/
 }
 
-.content{
-	/*display: none;*/
-}
+/*.contacts{
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 auto;
+	align-self: stretch;
+}*/
 
 header, main, footer{
 	opacity: 0.8;
@@ -54,6 +58,7 @@ html, body{
 body{
 	display: flex;
 	flex-direction: column;
+	/*margin: -10px;*/
 }
 
 header, main{
@@ -66,20 +71,88 @@ footer{
 
 .info, .portfolio, .mail{
 	display: none;
-	-webkit-transition: background 2s linear 1s;
-	-moz-transition: background 0.5s linear 1s;
-	-o-transition: background 0.5s linear 0.2s;
-	transition: background 2s linear 1s;
-}
-
-.info{
 	background-color: white;
 	border: 2px gray solid;
 	border-radius: 10px;
+	color: gray;
+	flex: 1 1 auto;
+	padding: 10px;
 }
 
 #myphoto{
 	border-radius: 10px;
 	border: 2px solid white;
-	/*opacity: 1;*/
 }
+
+a, a :hover, a :active, a :focus{
+	color: lightgray;
+}
+
+div.socials a :visited{
+	color: lightgray;
+}
+
+form{
+	color: lightgray;
+	padding: 20px;
+}
+
+a#vk :hover, a#vk :active, a#vk :focus, a#vk :visited{
+	color: #4D75A3;
+}
+
+a#whatsapp :hover, a#whatsapp :active, a#whatsapp :focus{
+	color: #61F151;
+}
+
+a#skype :hover, a#skype :active, a#skype :focus{
+	color: #00ABEA;
+}
+
+a#facebook :hover, a#facebook :active, a#facebook :focus{
+	color: #3B5998;
+}
+
+a#linkedin :hover, a#linkedin :active, a#linkedin :focus{
+	color: #006699;
+}
+
+a#github :hover, a#github :active, a#github :focus{
+	color: #000000;
+}
+
+#hint{
+	border: 2px gray solid;
+	border-radius: 10px;
+	color: gray;
+	margin: 10px 20px 10px 20px;
+}
+
+.info div.col-sm-1{
+	display: inline-block;
+	margin: 10px;
+}
+
+.invalid {
+	background-color: Pink;
+	opacity: 0.6;
+}
+
+.valid {
+	background-color: LightGreen;
+	opacity: 0.6;
+}
+
+.infoText{
+	padding: 20px;
+}
+
+.photo{
+	padding: 0 30px 0 15px;
+	float: left;
+}
+
+/*.form-control{
+	background-color: #CFD8D3;
+	color: black;
+}*/

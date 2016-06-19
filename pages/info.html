@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Filatov Alex web development</title>
+    
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/info_style.css">
+    <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css" >
+</head>
+<body>
+	<header>
+		<div class="container controls">
+			<div class="row">
+				<div class="col-sm-4 center">
+					<button class="btn" data-action="info">info / contacts</button>
+					</div>
+				<div class="col-sm-4 center">
+					<button class="btn" data-action="portfolio">portfolio</button>
+				</div>	
+				<div class="col-sm-4 center">
+					<button class="btn" data-action="mail">send a mail</button>
+				</div>
+			</div>
+		</div>	
+	</header>
+	<main>
+		<div class="container content">
+			<div class="container info col-sm-12">
+                <div class="row">
+				    <div class="photo">
+                        <img src="../img/me.jpg" alt="my photo" id="myphoto">
+                    </div>
+                    <div>
+                        <div class="infoText">
+                            <!--<p>&nbsp;&nbsp;&nbsp;Any web development for you.
+                            Individual approach, individual prices and individual terms.</p>
+                            <p>&nbsp;&nbsp;&nbsp;No stamps, projects are considered from the point
+                            of view of perfectionism.</p>
+                            <p>&nbsp;&nbsp;&nbsp;Contact me and specify your questions.</p>-->
+                            <p>
+                                &nbsp;&nbsp;I am a web programmer. Experience of web development - 2+ years.
+                                I am working remotely. Geographically, I am in the city of Kharkov, Ukraine.
+                            </p>
+                            <p>
+                                &nbsp;&nbsp;My skills: html5, css3, javascript, php, java, bootstrap3, jQuery,
+                                angularJS, gulp, wordpress and more. For each project individually go up.
+                                Flexible prices, a reasonable timeframe.
+                            </p>
+                            <p>
+                                &nbsp;&nbsp;Please contact me to ask clarifying questions. Always happy to cooperate
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row socials">
+                    <div class="col-sm-1"><a  href="https://new.vk.com/id313886427" id="vk" target="_blank"><i class="fa fa-vk fa-3x"></i></a></div>
+                    <div class="col-sm-1"><a  href="https://www.facebook.com/profile.php?id=100010877948801" id="facebook" target="_blank"><i class="fa fa-facebook fa-3x"></i></a></div>
+                    <div class="col-sm-1"><a  href="https://ua.linkedin.com/in/energaleks" id="linkedin" target="_blank"><i class="fa fa-linkedin fa-3x"></i></a></div>
+                    <div class="col-sm-1"><a  href="https://github.com/WalkerKharkov/" target="_blank" id="github" ><i class="fa fa-github fa-3x"></i></a></div>
+                    <div class="col-sm-1"><a  href="#" id="skype"><i class="fa fa-skype fa-3x"></i></a></div>
+                    <div class="col-sm-1"><a  href="#" id="whatsapp"><i class="fa fa-whatsapp fa-3x"></i></a></div>
+                    <div class="col-sm-5 center" id="hint"></div>
+                </div>
+                <div class="back row">
+                    <div class="col-sm-10"></div>
+                    <div class="col-sm-2">
+                        <button class="btn back">back</button>
+                    </div>
+                </div>
+			</div>
+			<div class="container portfolio col-sm-12">
+                <div class="row">
+                    <div class="col-sm-10 col-xs-9 center">
+                        <span>Under reconstruction &nbsp;&nbsp;</span>
+                        <i class="fa fa-spinner fa-spin fa-2x"></i>
+                    </div>
+                    <div class="back col-sm-2 col-xs-3">
+                            <button class="btn back">back</button>
+                    </div>
+                </div>
+			</div>
+			<div class="container mail col-sm-12">
+
+                <div class="row">
+                    <form class="form-horizontal col-sm-12" id="mainForm" method="post" action="../php/mail.php">
+                        <div class="form-group">
+                            <!--<label class="col-sm-2 control-label">your name</label>-->
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control" placeholder="your name" name="name" data-attr="name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <!--<label class="col-sm-2 control-label">your mail</label>-->
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control" placeholder="your mail" name="mail" data-attr="mail">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <!--<label class="col-sm-2 control-label">your letter</label>-->
+                            <div class="col-sm-12">
+                                <textarea class="form-control" placeholder="your letter" rows="10" name="text" data-attr="text"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button class="btn" type="submit">send</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="back row">
+                        <div class="col-sm-10 col-xs-8"></div>
+                        <div class="col-sm-2 col-xs-4">
+                            <button class="btn back">back</button>
+                        </div>
+
+                    </div>
+                </div>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<div class="copyright">&copy; 2016 Filatov Alex. All rights reserved.</div>
+    </footer>
+	
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.backstretch.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/info.js"></script>
+    <script src="../js/formValidate.js"></script>
+</body>
+</html>
