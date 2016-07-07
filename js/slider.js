@@ -189,7 +189,9 @@ var settings = {
         "imgPath" : "../img/portfolio/",
         "elem" : document.querySelector("#img"),
         "colorDelay" : 0.4,
-        "bootstrap" : true
+        "bootstrap" : true,
+        "pause" : 50,
+        "delay" : 30
 };
 
 (function imagesLoad(){
