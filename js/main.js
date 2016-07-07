@@ -1,5 +1,4 @@
-var doc=document;
-
+var doc = document;
 
 function curiosityBlock(){
     $(window).bind("contextmenu", function(event){
@@ -11,6 +10,5 @@ function curiosityBlock(){
             return false;
         }
     });
-
 }
 

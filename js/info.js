@@ -1,52 +1,57 @@
-var controls=doc.querySelector(".controls"),
-    copyright=doc.querySelector(".copyright"),
-    content=doc.querySelector(".content"),
-    hint=doc.querySelector("#hint"),
-    myphoto=doc.querySelector("#myphoto"),
+var controls = doc.querySelector(".controls"),
+    copyright = doc.querySelector(".copyright"),
+    content = doc.querySelector(".content"),
+    hint = doc.querySelector("#hint"),
+    myphoto = doc.querySelector("#myphoto"),
+    sliderDiv = doc.querySelector("#slider"),
+    sliderImg = doc.querySelector("#img"),
     screenHeight, screenWidth, action, i,
-    hintClicked, currentHint, photowidth;
-
-
-
-function showPage(){//////////////////////////////////////////////////////////////////////////////
-
-}
+    hintClicked, currentHint, photowidth, portfolioShow;
 
 function pageInit(){
     $.backstretch("../img/wall.jpg");
-    screenHeight=window.innerHeight;
-    screenWidth=window.innerWidth;
+    screenHeight = window.innerHeight;
+    screenWidth = window.innerWidth;
     var value,
-        rate=1;
-    value=(screenWidth>screenHeight) ? screenWidth : screenHeight;
-    rate=(screenWidth<768) ? 1.4 : rate;
-    value*=rate;
-    content.style.fontSize=Math.ceil(value*0.014)+"px";
-    copyright.style.fontSize=controls.style.fontSize=Math.ceil(value*0.018)+"px";
-    controls.style.marginTop = (screenWidth<768) ? Math.ceil(screenHeight/8)+"px" : Math.ceil(screenHeight / 2 - Math.ceil(value * 0.024 / 2))+"px";
+        rate = 1;
+    value = (screenWidth > screenHeight) ? screenWidth : screenHeight;
+    rate = (screenWidth < 768) ? 1.4 : rate;
+    value *= rate;
+    content.style.fontSize = Math.ceil(value * 0.014) + "px";
+    copyright.style.fontSize = controls.style.fontSize = Math.ceil(value * 0.018) + "px";
+    controls.style.marginTop = (screenWidth < 768) ? Math.ceil(screenHeight / 8) + "px" :
+        Math.ceil(screenHeight / 2 - Math.ceil(value * 0.024 / 2)) + "px";
     $(".btn").css("margin", "10px");
-    photowidth=Math.ceil(screenWidth/6.4);
-    myphoto.style.width=photowidth+"px";
-    myphoto.style.height=Math.ceil(1.12*photowidth)+"px";
+    photowidth = Math.ceil(screenWidth / 6.4);
+    sliderImg.style.width = getComputedStyle(sliderDiv).width;
+    sliderImg.style.height = parseInt(sliderImg.style.width) / 2;
+    if (doc.querySelector("#sliderControlPanel")){
+        sliderControlPanel = doc.querySelector("#sliderControlPanel");
+        sliderControlPanel.style.width = sliderImg.style.width;
+    }
+    myphoto.style.width = photowidth + "px";
+    myphoto.style.height = Math.ceil(1.12 * photowidth) + "px";
+    doc.querySelector("#img").style.width = "100%";
 }
 
 controls.addEventListener("click", function (event) {
-    action=event.target.getAttribute("data-action");
+    action = event.target.getAttribute("data-action");
     if (!action) return;
-    action="."+action;
+    action = "." + action;
     $(".controls").hide(700);
     $(action).show(1000);
-    if (action==".info"){
-        hint.style.height=doc.querySelector(".fa-facebook").offsetHeight+"px";
-        hint.style.lineHeight=hint.style.height;
+    if (action == ".info"){
+        hint.style.height = doc.querySelector(".fa-facebook").offsetHeight + "px";
+        hint.style.lineHeight = hint.style.height;
     }
+    if (action == ".portfolio") portfolioShow = true;
 });
 
 function back(){
     $(action).hide(700);
     $(".controls").show(1000);
-    hintClicked=false;
-    hint.innerText="";
+    hintClicked = false;
+    hint.innerText = "";
 }
 
 var hints={
@@ -60,11 +65,11 @@ var hints={
 
 function hintShow(event){
     if (hintClicked) return;
-    var target=event.target;
+    var target = event.target;
     while(target != this) {
         if (target.tagName == 'A') {
-            currentHint=target.id;
-            hint.innerText=hints[currentHint];
+            currentHint = target.id;
+            hint.innerText = hints[currentHint];
             break;
         }
         target = target.parentNode;
@@ -73,24 +78,21 @@ function hintShow(event){
 
 function hintHide(){
     if (hintClicked) return;
-    hint.innerText="";
+    hint.innerText = "";
 }
 
 function hintClick(event){
     if (hintClicked){
-        hintClicked=false;
+        hintClicked = false;
         hintShow(event);
-        hintClicked=true;
+        hintClicked = true;
     }
-    hintClicked=true;
+    hintClicked = true;
     hintShow(event);
 
 }
 
-/*(function(){
-    $.backstretch("../img/wall.jpg");
-    //curiosityBlock(); ///////////////////////////////////////////////////////////////
-})();*/
+//curiosityBlock();
 
 $(window).bind("load resize", pageInit);
 $("button.back").bind("click", back);

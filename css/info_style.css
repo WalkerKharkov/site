@@ -1,6 +1,39 @@
+html, body{
+    height: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+header, main{
+    flex: 1 0 auto;
+}
+
+footer{
+    flex: 0 0 auto;
+}
+
+header, main, footer{
+    opacity: 0.9;
+}
+
 .copyright{
 	color: white;
 	text-align: center;
+}
+
+.btn{
+    font-size: inherit;
+    background: #A2A2A2;
+    color: white;
+    border: white solid 2px ;
+    border-radius: 7px;
+    -webkit-transition: background 0.4s linear 0.2s;
+    -moz-transition: background 0.4s linear 0.2s;
+    -o-transition: background 0.4s linear 0.2s;
+    transition: background 0.4s linear 0.2s;
 }
 
 .btn.focus, .btn:focus, .btn:hover, .btn.active, .btn:active, .btn.active.focus, .btn.active:focus, .btn:active.focus, .btn:active:focus {
@@ -9,32 +42,8 @@
 	outline: none;
 }
 
-.btn{
-	font-size: inherit;
-	background: #A2A2A2;
-	color: white;
-	border: white solid 2px ;
-	border-radius: 7px;
-	-webkit-transition: background 0.4s linear 0.2s;
-	-moz-transition: background 0.4s linear 0.2s;
-	-o-transition: background 0.4s linear 0.2s;
-	transition: background 0.4s linear 0.2s;
-}
-
 .center{
 	text-align: center;
-	/*line-height: 200px;*/
-}
-
-/*.contacts{
-	display: flex;
-	flex-direction: column;
-	flex: 1 1 auto;
-	align-self: stretch;
-}*/
-
-header, main, footer{
-	opacity: 0.8;
 }
 
 @supports
@@ -49,24 +58,6 @@ header, main, footer{
 		color: white;
 		text-shadow: 0 0 10px darkgray;
 	}
-}
-
-html, body{
-	height: 100%;
-}
-
-body{
-	display: flex;
-	flex-direction: column;
-	/*margin: -10px;*/
-}
-
-header, main{
-	flex: 1 0 auto;
-}
-
-footer{
-	flex: 0 0 auto;
 }
 
 .info, .portfolio, .mail{
@@ -152,7 +143,18 @@ a#github :hover, a#github :active, a#github :focus{
 	float: left;
 }
 
-/*.form-control{
-	background-color: #CFD8D3;
+#sign{
+	text-align: right;
+	margin-right: 20px;
+	margin-top: 20px;
 	color: black;
-}*/
+}
+
+#img{
+	border-radius: 10px;
+}
+
+.invis{
+    background-color: transparent;!important;
+    border: none;!important;
+}

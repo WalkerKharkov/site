@@ -3,7 +3,6 @@ body{
     margin: 0;
     background-color: #999999;
     overflow: hidden;
-    visibility: hidden;
 }
 
 #text{
@@ -32,6 +31,16 @@ body{
     margin-left: 50%;
 }
 
+#viewmore, #viewmore :hover{
+    color: white;
+    position: absolute;
+    visibility: hidden;
+    text-decoration: none;
+    border: solid 2px;
+    padding: 0.5% 1%;
+    border-radius: 20px;
+}
+
 @supports
 (
         (-webkit-transform: rotate(90deg)) or
@@ -52,14 +61,4 @@ body{
         color: white;
         text-shadow: 0 0 10px darkgray;
     }
-}
-
-#viewmore, #viewmore :hover{
-    color: white;
-    position: absolute;
-    visibility: hidden;
-    text-decoration: none;
-    border: solid 2px;
-    padding: 0.5% 1%;
-    border-radius: 20px;
 }
