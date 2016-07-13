@@ -26,12 +26,13 @@ function pageInit(){
     sliderImg.style.width = getComputedStyle(sliderDiv).width;
     sliderImg.style.height = parseInt(sliderImg.style.width) / 2;
     if (doc.querySelector("#sliderControlPanel")){
-        sliderControlPanel = doc.querySelector("#sliderControlPanel");
+        var sliderControlPanel = doc.querySelector("#sliderControlPanel");
         sliderControlPanel.style.width = sliderImg.style.width;
     }
     myphoto.style.width = photowidth + "px";
     myphoto.style.height = Math.ceil(1.12 * photowidth) + "px";
     doc.querySelector("#img").style.width = "100%";
+    sliderDiv.style.height = parseInt(window.innerHeight) * .8 +"px";
 }
 
 controls.addEventListener("click", function (event) {
