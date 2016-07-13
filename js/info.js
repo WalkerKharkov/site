@@ -32,7 +32,7 @@ function pageInit(){
     myphoto.style.width = photowidth + "px";
     myphoto.style.height = Math.ceil(1.12 * photowidth) + "px";
     doc.querySelector("#img").style.width = "100%";
-    sliderDiv.style.height = parseInt(window.innerHeight) * .8 +"px";
+    sliderImg.style.height = parseInt(window.innerHeight) * .6 +"px";
 }
 
 controls.addEventListener("click", function (event) {
