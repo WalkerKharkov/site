@@ -3,36 +3,36 @@
     "name" : "1.jpg",
     "alt" : "insight",
     "href" : "http://insight.filatovalex.com/",
-    "title" : "click to view this site"
+    "title" : "Training project 'Insight'. Click to view this site"
   },
   "1" : {
     "name" : "2.jpg",
     "alt" : "blitz",
     "href" : "http://blitz.filatovalex.com/",
-    "title" : "click to view this site"
+    "title" : "Training project 'Blitz'. Click to view this site"
   },
   "2" : {
     "name" : "3.jpg",
     "alt" : "javascript code",
     "href" : "",
-    "title" : "click to enlarge"
+    "title" : "An example of writing JavaScript code. Click to enlarge"
   },
   "3" : {
     "name" : "4.jpg",
     "alt" : "java code",
     "href" : "",
-    "title" : "click to enlarge"
+    "title" : "An example of writing Java code. Click to enlarge"
   },
   "4" : {
     "name" : "5.jpg",
     "alt" : "filatovalex.com",
     "href" : "http://filatovalex.com/",
-    "title" : "click for view this site"
+    "title" : "This site. You can click for view this site"
   },
   "5" : {
     "name" : "6.jpg",
     "alt" : "slider",
     "href" : "https://github.com/WalkerKharkov/Slider-JS-bootstrap-font-awesome-",
-    "title" : "click to view this plug-in on github"
+    "title" : "Slider plug-in. Click to view this plug-in on github"
   }
 }
