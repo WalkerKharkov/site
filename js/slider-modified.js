@@ -62,10 +62,16 @@ function Slider(images, settings) {
 
     var imgWrapper = this.elem.parentElement.parentElement,
         controlPanel = this.doc.createElement("div"),
-        controls = '<div class="col-sm-10"><i class="fa fa-arrow-left fa-3x fa_slider" id="sliderprev" data-attr="prev"></i> &nbsp;&nbsp; ' +
-            '<i class="fa fa-pause fa-3x fa_slider" id="sliderpause" data-attr="pause"></i>&nbsp;&nbsp;&nbsp;&nbsp;' +
-            '<i class="fa fa-arrow-right fa-3x fa_slider" id="slidernext" data-attr="next" /*style="margin-right: 100px"*/></i></div>' +
-            '<div class="col-sm-2"><button class="btn back" id="back" data-attr="back">back</button></div>',
+        controls = '<div class="col-sm-10">' +
+                        '<i class="fa fa-arrow-left fa-3x fa_slider" id="sliderprev" data-attr="prev"></i>' +
+                        ' &nbsp;&nbsp; ' +
+                        '<i class="fa fa-pause fa-3x fa_slider" id="sliderpause" data-attr="pause"></i>' +
+                        '&nbsp;&nbsp;&nbsp;&nbsp;' +
+                        '<i class="fa fa-arrow-right fa-3x fa_slider" id="slidernext" data-attr="next" /*style="margin-right: 100px"*/></i>' +
+                    '</div>' +
+                    '<div class="col-sm-2">' +
+                        '<button class="btn back" id="back" data-attr="back">back</button>' +
+                    '</div>',
         controlsStyle = '<style type="text/css">.fa_slider:focus,.fa_slider:hover,.fa_slider:active,' +
             '.pauseActive{color:' + this.controlsActiveColor + ';cursor:pointer}</style>';
     if (this.colorDelay) {
