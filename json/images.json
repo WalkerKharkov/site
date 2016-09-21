@@ -34,5 +34,11 @@
     "alt" : "slider",
     "href" : "https://github.com/WalkerKharkov/Slider-JS-bootstrap-font-awesome",
     "title" : "Slider plug-in. Click to view this plug-in on github"
+  },
+  "6" : {
+    "name" : "7.jpg",
+    "alt" : "WordPress plugin. WordPress Instant Gallery",
+    "href" : "https://github.com/WalkerKharkov/WP-Instant-Slider-Gallery",
+    "title" : "WordPress plugin. WordPress Instant Gallery. Click to view this plug-in on github"
   }
 }

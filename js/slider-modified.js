@@ -192,8 +192,8 @@ var settings = {
     "elem": document.querySelector("#img"),
     "colorDelay": 0.4,
     "bootstrap": true,
-    "pause": 50,
-    "delay": 20,
+    "pause": 80,
+    "delay": 15,
     "title": true
 };
 
